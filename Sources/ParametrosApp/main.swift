@@ -86,3 +86,8 @@ if yonFood == "s" || yonFood == "sim" {
     print("Consideraremos todos os tipos de comida")
     }
 print("O numero digitado foi: \([food])")
+
+func filterParametros() {
+    let lista = lista paramentro. filter ($0.atributo)
+    forEach
+}

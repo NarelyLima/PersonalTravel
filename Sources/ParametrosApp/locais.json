@@ -1,0 +1,40 @@
+//teste usando fortaleza como exemplo
+[{
+    "clima": "Frio",
+    "regiao": "Sul",
+    "tipoAmbiente": "Serra",
+    "Comida": "Japonesa",
+    "urlLocal": " Cidade 1 "
+    "urlHotel": " Hotel 1 "
+    "urlFood": " Restaurante 1 "
+},
+{   "clima": "Frio",
+    "regiao": "Sudeste",
+    "tipoAmbiente": "Serra",
+    "Comida": "Brasileira",
+    "urlLocal": " Cidade 2"
+    "urlHotel": " Hotel 2 "
+    "urlFood": " Restaurante 2"
+},
+{   "clima": "Quente",
+    "regia": "Centro-oeste",
+    "tipoAmbiente": "Praia",
+    "Comida": "Italiana",
+    "urlLocal": " Cidade 3 "
+    "urlHotel": " Hotel 3 "
+    "urlFood": " Restaurante 3"
+},
+{   "clima": "Frio",
+    "regiao": "Norte",
+    "tipoAmbiente": "Serra",
+    "Comida": "Mexicano",
+  e
+},
+{   "clima": "Quente",
+    "regiao": "Nordeste",
+    "tipoAmbiente": "Praia",
+    "Comida": "Brasileira",
+    "urlLocal": " Cidade 5"
+    "urlHotel": " Hotel 5"
+    "urlFood": " Restaurante 5"
+}]

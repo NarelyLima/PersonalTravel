@@ -1,40 +1,42 @@
-//teste usando fortaleza como exemplo
+
 [{
-    "clima": "Frio",
+    "clima": "frio",
     "regiao": "Sul",
     "tipoAmbiente": "Serra",
-    "Comida": "Japonesa",
-    "urlLocal": " Cidade 1 "
-    "urlHotel": " Hotel 1 "
-    "urlFood": " Restaurante 1 "
+    "comida": "Japonesa",
+    "urlLocal": " Cidade 1 ",
+    "urlHotel": " Hotel 1 ",
+    "urlFood": " Restaurante 1 ",
 },
-{   "clima": "Frio",
+{   "clima": "frio",
     "regiao": "Sudeste",
     "tipoAmbiente": "Serra",
-    "Comida": "Brasileira",
-    "urlLocal": " Cidade 2"
-    "urlHotel": " Hotel 2 "
-    "urlFood": " Restaurante 2"
+    "comida": "Brasileira",
+    "urlLocal": " Cidade 2",
+    "urlHotel": " Hotel 2 ",
+    "urlFood": " Restaurante 2",
 },
-{   "clima": "Quente",
-    "regia": "Centro-oeste",
+{   "clima": "quente",
+    "regiao": "Centro-oeste",
     "tipoAmbiente": "Praia",
-    "Comida": "Italiana",
-    "urlLocal": " Cidade 3 "
-    "urlHotel": " Hotel 3 "
-    "urlFood": " Restaurante 3"
+    "comida": "Italiana",
+    "urlLocal": " Cidade 3 ",
+    "urlHotel": " Hotel 3 ",
+    "urlFood": " Restaurante 3",
 },
-{   "clima": "Frio",
+{   "clima": "frio",
     "regiao": "Norte",
     "tipoAmbiente": "Serra",
-    "Comida": "Mexicano",
-  e
+    "comida": "Mexicano",
+    "urlLocal": " Cidade 3 ",
+    "urlHotel": " Hotel 3 ",
+    "urlFood": " Restaurante 3",
 },
-{   "clima": "Quente",
+{   "clima": "quente",
     "regiao": "Nordeste",
     "tipoAmbiente": "Praia",
-    "Comida": "Brasileira",
-    "urlLocal": " Cidade 5"
-    "urlHotel": " Hotel 5"
-    "urlFood": " Restaurante 5"
+    "comida": "Brasileira",
+    "urlLocal": " Cidade 5",
+    "urlHotel": " Hotel 5",
+    "urlFood": " Restaurante 5",
 }]

@@ -1,7 +1,7 @@
 # ParametrosApp
 
 Essa aplicação de terminal busca encontrar uma viagem/destino a partir de seus gostos pessoais.
-Serão disponibilizados, também, links de acesso de pontos turísticos, hotéis e restaurantes.
+Serão disponibilizados, também, nomes de pontos turísticos, hotéis e restaurantes(A ideia para trabalhos posteriores é colocar os links dos respectivos pontos turísticos, hotéis e restaurantes).
 Eu considerei que essa aplicação iria me ajudar muito nas minhas próximas viagens, visto que sou muito indecisa e ter um aplicativo que já me mostra os destinos de acordo com o meu mood.
 
 ## Explicando a lógica
@@ -14,7 +14,7 @@ O projeto é dividivo em locais.json e main.swift
    - Contém os paramêtros que serão filtrados
  - main.swift:
    - A parte inicial apresentará todas as funcões que serão utilizadas
-   - As 4(quatro) primeirar referem-se aos filtros. Eles mantêm um padrão, recebem uma string(resposta do usuário) e filtro na lista referente a pergunta anterior.
+   - As 4(quatro) primeirar referem-se aos filtros. Eles mantêm um padrão, recebem uma string(resposta do usuário) e filtra na lista referente a pergunta anterior.
    -- Como assim a lista anterior?
    - A pergunta referente ao clima filtra todas as combinações inseridas na pasta locais.json que possuem a característica do usuário, por exemplo, quente
    - O filtro que agirá após a resposta do usuário não filtrará todas as combinações em cima da minha lista geral localizada na pasta locais.json, mas sim na lista criada pelo filtro do clima(climaList), caso contrário, não iria ser personalizado.

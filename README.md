@@ -1,4 +1,4 @@
-# ParametrosApp
+# PersonalTravel
 
 Essa aplicação de terminal busca encontrar uma viagem/destino a partir de seus gostos pessoais.
 Serão disponibilizados, também, nomes de pontos turísticos, hotéis e restaurantes(A ideia para trabalhos posteriores é colocar os links dos respectivos pontos turísticos, hotéis e restaurantes).

@@ -2,7 +2,7 @@
 
 Essa aplicação de terminal busca encontrar uma viagem/destino a partir de seus gostos pessoais.
 Serão disponibilizados, também, nomes de pontos turísticos, hotéis e restaurantes(A ideia para trabalhos posteriores é colocar os links dos respectivos pontos turísticos, hotéis e restaurantes).
-Eu considerei que essa aplicação iria me ajudar muito nas minhas próximas viagens, visto que sou muito indecisa e ter um aplicativo que já me mostra os destinos de acordo com o meu mood.
+Eu considerei que essa aplicação iria me ajudar muito nas minhas próximas viagens, visto que sou muito indecisa e ter um aplicativo que já me mostra os destinos de acordo com o meu mood seria perfeito.
 
 ## Explicando a lógica
 

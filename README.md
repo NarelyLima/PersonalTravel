@@ -11,7 +11,7 @@ O projeto é dividivo em locais.json e main.swift
  - locais.json:
    - Estará inserida a lista de dados que serão utilizados em toda a minha implementação
    - Serão apresentadas algumas das mais variadas combinações possíveis das respostas dos usuários.
-   - Contém os paramêtros que serão filtrados
+   - Contém os parâmetros que serão filtrados
  - main.swift:
    - A parte inicial apresentará todas as funcões que serão utilizadas
    - As 4(quatro) primeirar referem-se aos filtros. Eles mantêm um padrão, recebem uma string(resposta do usuário) e filtra na lista referente a pergunta anterior.

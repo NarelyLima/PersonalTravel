@@ -39,14 +39,14 @@ struct Local: Decodable {
     let urlLocal: String
     let urlHotel: String
     let urlFood: String
-    
+
     public func printURls() -> String {
         return """
-        As opções foram selecionadas com muito carinho. Clique nas URL's abaixo: 
+        As opções foram selecionadas com muito carinho. Clique nas URL's abaixo:
         URLLocal: \(urlLocal)
         URLHotel: \(urlHotel)
         URLFood: \(urlFood)
-        
+
     """
     }
 }
@@ -61,10 +61,16 @@ do {
     print(error)
 }
 
+var region = ""
+var typeAmb = ""
+var yonFood = ""
+var typeFood = ""
+
 // perguntas que serão realizadas ao meu usuário
 
 // ------------------ CLIMA -------------------------
-print("\u{001B}[0;36mQual o clima que você quer? Quente(A) ou Frio(B)?\nPor favor, digite o nome ou a letra referente:")
+
+print("\u{001B}Qual o clima que você quer? Quente(A) ou Frio(B)?\nPor favor, digite o nome ou a letra referente:")
 var climate = readLine()!.lowercased()
 let validOptions1 = ["a","b","quente","frio"] // listinha
 if !validOptions1.contains(climate) {
@@ -72,7 +78,7 @@ if !validOptions1.contains(climate) {
         print("Insira novamente: Quente(A) ou Frio(B)")
         climate = readLine()!.lowercased()
     }
-    print("\u{001B}[0;35mO clima escolhido foi: \(climate)")
+    print("\u{001B}O clima escolhido foi: \(climate)")
 }
 
 if (climate == "a") {
@@ -86,7 +92,7 @@ var locaisPorClima = filterClima(climate, locais: listaDeLocais) // primeiro pas
 //------------------ REGIAO -------------------------
 
 func verificarRegiao(locais: [Local]) -> [Local] {
-    var region = readLine()!.lowercased() //climate
+    region = readLine()!.lowercased() //climate
     let validOptions2 = ["a","b","c","d","e","norte","nordeste","sul","sudeste","centro oeste"]
     if !validOptions2.contains(region){
         while !validOptions2.contains(region) {
@@ -106,16 +112,17 @@ func verificarRegiao(locais: [Local]) -> [Local] {
     }else if (region == "e") {
         region = "centro oeste"
     }
-    
+
     return filterRegiao(region, locais: locais)
-    
+
 }
 
-print("\u{001B}[0;32mQual a região do Brasil que você quer conhecer?\nPor favor, digite o nome ou a letra referente:\nNorte(a), Nordeste(b), Sul(c), Sudeste(d), Centro oeste(e)")
+print("\u{001B}Qual a região do Brasil que você quer conhecer?\nPor favor, digite o nome ou a letra referente:\nNorte(a), Nordeste(b), Sul(c), Sudeste(d), Centro oeste(e)")
 
 var locaisPorRegiao = verificarRegiao(locais: locaisPorClima)
 
-while locaisPorRegiao.isEmpty {
+
+while !locaisPorRegiao.isEmpty {
     print("Entre novamente")
     locaisPorRegiao = verificarRegiao(locais: locaisPorClima)
 }
@@ -123,8 +130,8 @@ while locaisPorRegiao.isEmpty {
 //------------------ TIPO DE AMBIENTE ----------------------
 
 func verificarAmbiente(locais: [Local]) -> [Local]{
-    
-    var typeAmb = readLine()!.lowercased()
+
+    typeAmb = readLine()!.lowercased()
     let validOptions3 = ["a","b","c","d","e","praia","serra","interior","floresta","cidade grande"]
     if (typeAmb == "a") {
         typeAmb = "praia"
@@ -142,28 +149,18 @@ func verificarAmbiente(locais: [Local]) -> [Local]{
             print("\u{001B}[0;33mInsira novamente: Praia(a), Serra(b), Interior(c), Floresta(d), Cidade Grande(e)")
             typeAmb = readLine()!.lowercased()
         }
-        print("\u{001B}[0;35mO ambiente escolhido foi: \(typeAmb)")
+        print("\u{001B}O ambiente escolhido foi: \(typeAmb)")
     }
-    if (typeAmb == "a") {
-        typeAmb = "praia"
-    } else if (typeAmb == "b") {
-        typeAmb = "serra"
-    }else if (typeAmb == "c") {
-        typeAmb = "interior"
-    }else if (typeAmb == "d") {
-        typeAmb = "floresta"
-    }else if (typeAmb == "e") {
-        typeAmb = "cidade grande"
-    }
+
     return filterAmb(typeAmb, locais: locais)
-    
+
 }
 
-print("\u{001B}[0;33mQual o tipo de ambiente que voce deseja?\nPor favor, digite o nome ou a letra referente:\nPraia(a), Serra(b), Interior(c), Floresta(d), Cidade Grande(e)nao")
+print("\u{001B}Qual o tipo de ambiente que voce deseja?\nPor favor, digite o nome ou a letra referente:\nPraia(a), Serra(b), Interior(c), Floresta(d), Cidade Grande(e)")
 
 var locaisPorAmbiente = verificarAmbiente(locais: locaisPorRegiao)
 
-while locaisPorAmbiente.isEmpty {
+while !locaisPorAmbiente.isEmpty {
     print("Entre novamente")
     locaisPorAmbiente = verificarAmbiente(locais: locaisPorRegiao)
 }
@@ -171,10 +168,9 @@ while locaisPorAmbiente.isEmpty {
 //--------------------- TIPO DE COMIDA -----------------------
 func verificarComida(locais: [Local]) -> [Local]{
     var food: [String] = []
-    
-    var yonFood = readLine()!.lowercased()
+    yonFood = readLine()!.lowercased()
     let validOptions4 = ["a", "b", "c", "d", "e", "f", "g", "japonesa", "italiana", "brasileira", "pizza", "mexicana", "sorvete", "sanduiche"]
-    
+
     while true{
         if  yonFood != "n"  && yonFood != "s"  && yonFood != "nao"  && yonFood != "sim"{
             print("Digite novamente: SIM(S) ou NAO(N)")
@@ -186,8 +182,8 @@ func verificarComida(locais: [Local]) -> [Local]{
     if yonFood == "s" || yonFood == "sim" {
         while yonFood == "s" || yonFood == "sim" {
             print("\u{001B}[0;32mPor favor, digite o nome ou a letra referente:\nJaponesa(A), Italiana(B), Brasileira(C), Pizza(D), Mexicana(E), Sorvete(F), Sanduiche(G)")
-            var typeFood = readLine()!.lowercased()
-            
+            typeFood = readLine()!.lowercased()
+
             if !validOptions4.contains(typeFood) {
                 while !validOptions4.contains(typeFood)  {
                     print("Insira novamente: Japonesa(A), Italiana(B), Brasileira(C), Pizza(D), Mexicana(E), Sorvete(F), Sanduiche(G)")
@@ -210,22 +206,22 @@ func verificarComida(locais: [Local]) -> [Local]{
                 typeFood = "sanduiche"
             }
             food.append(typeFood)
-            
+
             print("""
               Voce deseja acrescentar outra comida? Sim(s) ou Nao(n)
               Por favor, digite o nome ou a letra referente:
               """)
             yonFood = readLine()!.lowercased()
         }
-        
+
     } else if yonFood == "n" || yonFood == "nao"{
-        print("\u{001B}[0;32mConsideraremos todos os tipos de comida")
+        print("\u{001B}Consideraremos todos os tipos de comida")
         food += ["japonesa","mexicana","brasileira","italiana","pizza","sanduiche","sorvete"]
     }
-    print("\u{001B}[0;35mA(s) comida(s) digitada(s) foi(ram): \([food])")
+    // print("\u{001B}A(s) comida(s) digitada(s) foi(ram): \([food])")
     return filterComida(food, locais: locais)
 }
-print("\u{001B}[0;31mVocê tem alguma vontade de comer algo específico? SIM(S) ou NAO(N)?\nOBS.: Se você escolher, consideraremos todos os tipos de comida.")
+print("\u{001B}Você tem alguma vontade de comer algo específico? SIM(S) ou NAO(N)?\nOBS.: Se você escolher, consideraremos todos os tipos de comida.")
 
 var locaisPorComida = verificarComida(locais: locaisPorAmbiente)
 
